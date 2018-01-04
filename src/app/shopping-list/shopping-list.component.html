@@ -4,7 +4,10 @@
 		</app-shopping-edit>
 		<hr/>
 		<ul class="list-group">
-			<a href="#" class="list-group-item" style="cursor: pointer;" *ngFor="let ingridient of ingridients">
+			<a class="list-group-item" style="cursor: pointer;" 
+			*ngFor="let ingridient of ingridients; let i=index"
+			(click)="onEditItem(i)"
+			>
 				{{ ingridient.name }} ({{ ingridient.amount }})
 			</a>
 		</ul>
